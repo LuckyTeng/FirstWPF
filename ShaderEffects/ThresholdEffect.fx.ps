@@ -1,0 +1,33 @@
+﻿// Threshold shader 
+  
+  
+// Object Declarations
+  
+  
+sampler2D Input : register(s0);
+float Threshold : register(c0);
+float4 BlankColor : register(c1);
+  
+//--------------------------------------------------------------------------------------
+  
+// Pixel Shader
+  
+//--------------------------------------------------------------------------------------
+  
+float4 main(float2 uv : TEXCOORD) : COLOR
+{
+    float4 color = tex2D(Input, uv.xy);
+//    float intensity = (color.r + color.g + color.b) / 3;
+  
+//    float4 result;
+//    if (intensity > Threshold)
+//    {
+        result = color;
+//    }
+//    else
+//    {
+//        result = BlankColor;
+//    }
+  
+//    return result;
+}

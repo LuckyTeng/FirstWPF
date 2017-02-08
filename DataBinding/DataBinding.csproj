@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF5C3606-84B3-4B4C-A2DC-A62F18336194}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataBinding</RootNamespace>
+    <AssemblyName>DataBinding</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ADOBindingml.xaml.cs">
+      <DependentUpon>ADOBindingml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgeRangeRule.cs" />
+    <Compile Include="AsyncDataSource.cs" />
+    <Compile Include="AsyncImageSource.cs" />
+    <Compile Include="BaseOnSelection.xaml.cs">
+      <DependentUpon>BaseOnSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingToEnum.xaml.cs">
+      <DependentUpon>BindingToEnum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingValidation.xaml.cs">
+      <DependentUpon>BindingValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindMethod.xaml.cs">
+      <DependentUpon>BindMethod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindTwoControls.xaml.cs">
+      <DependentUpon>BindTwoControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindXDoc.xaml.cs">
+      <DependentUpon>BindXDoc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DoubleToString.cs" />
+    <Compile Include="ImageProgress.xaml.cs">
+      <DependentUpon>ImageProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IntColorConverter.cs" />
+    <Compile Include="InvalidCharacterRule.cs" />
+    <Compile Include="LeagueList.cs" />
+    <Compile Include="MasDtlHier.xaml.cs">
+      <DependentUpon>MasDtlHier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasDtlHierXML.xaml.cs">
+      <DependentUpon>MasDtlHierXML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiBinding.xaml.cs">
+      <DependentUpon>MultiBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NameConverter.cs" />
+    <Compile Include="NameList.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="CodeBinding.xaml.cs">
+      <DependentUpon>CodeBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompositeCollection.xaml.cs">
+      <DependentUpon>CompositeCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Convert.xaml.cs">
+      <DependentUpon>Convert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DateConverter.cs" />
+    <Compile Include="DefaultView.xaml.cs">
+      <DependentUpon>DefaultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GreekGods.cs" />
+    <Compile Include="MyData.cs" />
+    <Compile Include="NetIncome.cs" />
+    <Compile Include="ObjectValidation.xaml.cs">
+      <DependentUpon>ObjectValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Place.cs" />
+    <Compile Include="Places.cs" />
+    <Compile Include="Portal.xaml.cs">
+      <DependentUpon>Portal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PriorityBinding.xaml.cs">
+      <DependentUpon>PriorityBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sch.cs" />
+    <Compile Include="SortGroup.xaml.cs">
+      <DependentUpon>SortGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SortInView.xaml.cs">
+      <DependentUpon>SortInView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifyBinding.xaml.cs">
+      <DependentUpon>SpecifyBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TemperatureScale.cs" />
+    <Compile Include="WebBinding.xaml.cs">
+      <DependentUpon>WebBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XMLDataProvider.xaml.cs">
+      <DependentUpon>XMLDataProvider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xmlnamespace.xaml.cs">
+      <DependentUpon>xmlnamespace.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ADOBindingml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BaseOnSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingToEnum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingValidation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindMethod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindTwoControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindXDoc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CodeBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompositeCollection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Convert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImageProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MasDtlHier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MasDtlHierXML.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ObjectValidation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Portal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PriorityBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SimpleBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="SimpleBinding.xaml.cs">
+      <DependentUpon>SimpleBinding.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SortGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SortInView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpecifyBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WebBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XMLDataProvider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xmlnamespace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BookData.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Planets.xml" />
+    <Resource Include="Images\IMG_high.JPG" />
+    <Resource Include="Images\IMG_low.jpg" />
+    <Resource Include="Images\IMG_med.jpg" />
+    <Resource Include="Data\Leagues.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

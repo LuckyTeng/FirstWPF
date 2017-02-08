@@ -1,0 +1,23 @@
+﻿<Window x:Class="ResizableApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <GridSplitter Height="10" HorizontalAlignment="Stretch" Margin="0" Name="gridSplitter1" VerticalAlignment="Stretch" Width="Auto" ResizeDirection="Rows" Grid.Row="1" />
+        <DockPanel Height="Auto" HorizontalAlignment="Stretch" Margin="0" Name="dockPanel1" VerticalAlignment="Stretch" Width="Auto">
+            <Label Content="Display" Height="28" Name="label1" Background="Blue" Foreground="White" DockPanel.Dock="Top" VerticalAlignment="Top" />
+            <RichTextBox Height="Auto" Name="richTextBox1" Width="Auto" Background="LightBlue" DockPanel.Dock="Bottom" IsReadOnly="True" />
+        </DockPanel>
+        <Grid Grid.Row="2" Height="Auto" HorizontalAlignment="Stretch" Margin="0" Name="grid1" VerticalAlignment="Stretch" Width="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>

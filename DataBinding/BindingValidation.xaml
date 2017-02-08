@@ -1,0 +1,43 @@
+﻿<Window x:Class="DataBinding.BindingValidation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:c="clr-namespace:DataBinding"
+        Title="BindingValidation" Height="284" Width="170">
+    <Window.Resources>
+        <ControlTemplate x:Key="validationTemplate">
+            <DockPanel>
+                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
+                <AdornedElementPlaceholder/>
+            </DockPanel>
+        </ControlTemplate>
+
+        <Style x:Key="textBoxInError" TargetType="{x:Type TextBox}">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true">
+                <Setter Property="ToolTip"
+          Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                          Path=(Validation.Errors)[0].ErrorContent}"/>
+            </Trigger>
+        </Style.Triggers>
+        </Style>
+
+        <c:Person x:Key="ods"></c:Person>
+    </Window.Resources>
+    <StackPanel>
+        <Label Content="Age:" HorizontalContentAlignment="Center"></Label>
+        <TextBox Name="textBox1" Width="50" FontSize="15"
+           Validation.ErrorTemplate="{StaticResource validationTemplate}"
+           Style="{StaticResource textBoxInError}"
+           Grid.Row="1" Grid.Column="1" Margin="2">
+            <TextBox.Text>
+                <Binding Path="Age" Source="{StaticResource ods}"
+               UpdateSourceTrigger="PropertyChanged" >
+                    <Binding.ValidationRules>
+                        <c:AgeRangeRule Min="21" Max="130"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+    </StackPanel>
+</Window>

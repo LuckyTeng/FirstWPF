@@ -1,0 +1,17 @@
+﻿<Window x:Class="DataBinding.BindXDoc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BindXDoc" Height="300" Width="300" Loaded="Window_Loaded">
+    <StackPanel Name="stacky">
+        <StackPanel.Resources>
+            <DataTemplate x:Key="mydt" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="100" Text="{Binding Path=Element[DiameterKM].Value}" />
+                    <TextBlock Width="100" Text="{Binding Path=Attribute[Name].Value}" />
+                    <TextBlock Text="{Binding Path=Element[Details].Value}" />
+                </StackPanel>
+            </DataTemplate>
+        </StackPanel.Resources>
+        <ListBox Height="234" Name="listBox1" Width="258" ItemsSource="{Binding }" ItemTemplate="{StaticResource mydt}" />
+    </StackPanel>
+</Window>

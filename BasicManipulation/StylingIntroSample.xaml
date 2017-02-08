@@ -1,0 +1,61 @@
+﻿<Window x:Class="BasicManipulation.StylingIntroSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="StylingIntroSample" Height="328" Width="455">
+    <Window.Resources>
+
+        <!--A Style that affects all TextBlocks-->
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <!--A Style that extends the previous TextBlock Style-->
+        <!--This is a "named style" with an x:Key of TitleText-->
+        <Style BasedOn="{StaticResource {x:Type TextBlock}}"
+         TargetType="TextBlock"
+         x:Key="TitleText">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.0" Color="#90DDDD" />
+                            <GradientStop Offset="1.0" Color="#5BFFFF" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--DataTemplate to display Photos as images
+      instead of text strings of Paths-->
+        <DataTemplate x:Key="d1">
+            <Border Margin="3">
+                <Image Width="90" Height="90" Source="{Binding XPath=@name}"></Image>
+            </Border>
+        </DataTemplate>
+
+        <XmlDataProvider x:Key="MyPhotos" XPath="Photos">
+            <x:XData>
+                <Photos xmlns="" >
+                    <Photo name="/images/12676.jpg">
+                    </Photo>
+                    <Photo name="/images/LIEN.jpg">
+                    </Photo>
+                </Photos>
+            </x:XData>
+        </XmlDataProvider>
+
+
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Style="{StaticResource TitleText}">My Pictures</TextBlock>
+        <TextBlock>Check out my new pictures!</TextBlock>
+
+        <ListBox Background="Silver" Width="400" Margin="10" SelectedIndex="0" Height="100" ItemsSource="{Binding Source={StaticResource MyPhotos},XPath=Photo}" ItemTemplate="{StaticResource d1}" />
+
+    </StackPanel>
+</Window>

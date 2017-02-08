@@ -1,0 +1,15 @@
+﻿<Window x:Class="BasicManipulation.CompositedButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CompositedButton" Height="300" Width="300">
+    <Button Margin="20" Click="Button_Click">
+        <!-- Button Content -->
+        <DockPanel Width="200" Height="180">
+            <Label DockPanel.Dock="Top" HorizontalAlignment="Center">Click Me!</Label>
+            <Border Background="Black" BorderBrush="Yellow" BorderThickness="2" 
+        CornerRadius="2" Margin="5">
+                <MediaElement Name="meWild" Source="media/wildlife.wmv" Stretch="Fill" />
+            </Border>
+        </DockPanel>
+    </Button>
+</Window>

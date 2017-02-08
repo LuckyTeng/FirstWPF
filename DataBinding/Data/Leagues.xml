@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Leagues>
+
+        <League name="Jonson" skill="fastball">
+            <Division name="East">
+                <Team name="shocker"></Team>
+                <Team name="hacker"></Team>
+            </Division>
+            <Division name="West">
+                <Team name="joke"></Team>
+                <Team name="power"></Team>
+            </Division>
+            <Division name="Middle">
+                <Team name="fish"></Team>
+                <Team name="beer"></Team>
+            </Division>
+        </League>
+        <League name="Richer" skill="curveball" ></League>
+            <Division>East</Division>
+        <League name="Mickrev" skill="sinkerball" ></League>
+    <Division>East</Division>
+        <League name="Steven" skill="sliderball" ></League>
+    <Division>East</Division>
+</Leagues>

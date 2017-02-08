@@ -1,0 +1,34 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:DataBinding" 
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="How to: Create a Simple Binding" Loaded="Window_Loaded" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="253" d:DesignWidth="313" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <!--<src:Person x:Key="myDataSource" PersonName="Joe"/>-->
+        <ObjectDataProvider x:Key="myDataSource" ObjectType="{x:Type src:Person}">
+            <ObjectDataProvider.ConstructorParameters>
+                <system:String>Joe</system:String>
+            </ObjectDataProvider.ConstructorParameters>
+        </ObjectDataProvider>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="142*" />
+            <ColumnDefinition Width="149*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="{Binding Source={StaticResource myDataSource}, Path=PersonName}" Grid.ColumnSpan="2"></TextBlock>
+        <Label Grid.ColumnSpan="2" Margin="0,53,0,134">Enter a Name:</Label>
+        <TextBox Grid.ColumnSpan="2" Margin="0,86,141,106">
+            <TextBox.Text>
+                <Binding Source="{StaticResource myDataSource}" Path="PersonName"
+               UpdateSourceTrigger="PropertyChanged"/>
+            </TextBox.Text>
+        </TextBox>
+
+        <Label Grid.ColumnSpan="2" Margin="0,114,141,65">The name you entered:</Label>
+        <TextBlock Text="{Binding Source={StaticResource myDataSource}, Path=PersonName}" Margin="0,148,0,27" Grid.ColumnSpan="2" />
+
+    </Grid>
+</Window>

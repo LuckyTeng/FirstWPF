@@ -1,0 +1,21 @@
+﻿<Window x:Class="FirstWPF.Brushes.TileBrush"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TileBrush" Height="300" Width="300" xmlns:my="clr-namespace:FirstWPF">
+    <Grid>
+        <Rectangle Margin="22,24,80,112" Name="rect1">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="3"/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+
+                <!-- Paints an area with 4 tiles. -->
+                <ImageBrush ImageSource="/FirstWPF;component/Chrysanthemum.jpg"
+        Viewport="0,0,0.5,0.5"
+        ViewportUnits="RelativeToBoundingBox" 
+        TileMode="FlipXY" />
+            </Rectangle.Fill>
+        </Rectangle>
+        
+    </Grid>
+</Window>

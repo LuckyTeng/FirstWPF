@@ -1,0 +1,21 @@
+﻿<Window x:Class="DataBinding.ImageProgress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c="clr-namespace:DataBinding"
+        Title="ImageProgress" Height="667" Width="893">
+    <Window.Resources>
+        <c:AsyncImageSource SlowestDP="/DataBinding;component/Images/IMG_high.JPG" SlowerDP="/DataBinding;component/Images/IMG_med.JPG"
+                       FastDP="/DataBinding;component/Images/IMG_low.JPG" x:Key="AsyncDS" />
+    </Window.Resources>
+    <Grid>
+        <Image Height="Auto" HorizontalAlignment="Stretch" Margin="13,14,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" 
+               DataContext="{Binding Source={StaticResource AsyncDS}}">
+            <Image.Source>
+                <PriorityBinding FallbackValue="defaultvalue">
+                    <Binding Path="SlowestDP" IsAsync="True"/>
+                    <Binding Path="SlowerDP" IsAsync="True"/>
+                    <Binding Path="FastDP" />
+                </PriorityBinding>
+            </Image.Source>
+        </Image>
+    </Grid>
+</Window>

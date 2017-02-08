@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<SolarSystemPlanets >
+    <Planets>
+        <Planet name="Mars">
+            <DiameterKM>1.3248</DiameterKM>
+            <Detail>It's my hometown.</Detail>
+        </Planet>
+    </Planets>
+</SolarSystemPlanets>

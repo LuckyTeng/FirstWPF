@@ -1,0 +1,13 @@
+﻿<Window x:Class="ShaderEffects.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:ShaderEffects"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:ThresholdEffect x:Key="thresholdEffect" Threshold="0.25" BlankColor="Orange" />
+    </Window.Resources>
+
+    <Grid Effect="{StaticResource thresholdEffect}">
+
+    </Grid>
+
+</Window>
