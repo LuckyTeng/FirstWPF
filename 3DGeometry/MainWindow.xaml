@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="552" Width="895" 
         xmlns:my="clr-namespace:IdentityMine.Avalon.Controls;assembly=Flipper3DTransition" 
-        xmlns:my1="clr-namespace:MyClass;assembly=MyClass"
         xmlns:my3="clr-namespace:_3DGeometry">
     <Grid>
         <my3:sticky HorizontalAlignment="Left" Margin="12,12,0,0" x:Name="sticky1" VerticalAlignment="Top" />
