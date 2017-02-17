@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Leagues>
-
         <League name="Jonson" skill="fastball">
             <Division name="East">
                 <Team name="shocker"></Team>

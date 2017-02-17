@@ -90,6 +90,9 @@
     <Compile Include="ControlTemplateAnimate.xaml.cs">
       <DependentUpon>ControlTemplateAnimate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataGridSql.xaml.cs">
+      <DependentUpon>DataGridSql.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataTemplate.xaml.cs">
       <DependentUpon>DataTemplate.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlTemplateAnimate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataGridSql.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

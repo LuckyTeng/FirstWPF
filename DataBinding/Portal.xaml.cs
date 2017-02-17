@@ -123,5 +123,17 @@ namespace DataBinding
             BindMethod wnd = new BindMethod();
             wnd.Show();
         }
+
+        private void button18_Click(object sender, RoutedEventArgs e)
+        {
+            ADOBindingml wnd = new ADOBindingml();
+            wnd.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataTemplating wnd = new DataTemplating();
+            wnd.Show();
+        }
     }
 }

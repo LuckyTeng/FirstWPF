@@ -78,6 +78,9 @@
     <Compile Include="BindXDoc.xaml.cs">
       <DependentUpon>BindXDoc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataTemplating.xaml.cs">
+      <DependentUpon>DataTemplating.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DoubleToString.cs" />
     <Compile Include="ImageProgress.xaml.cs">
       <DependentUpon>ImageProgress.xaml</DependentUpon>
@@ -124,6 +127,7 @@
     <Compile Include="PriorityBinding.xaml.cs">
       <DependentUpon>PriorityBinding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Sch.cs" />
     <Compile Include="SortGroup.xaml.cs">
       <DependentUpon>SortGroup.xaml</DependentUpon>
@@ -134,6 +138,7 @@
     <Compile Include="SpecifyBinding.xaml.cs">
       <DependentUpon>SpecifyBinding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tasks.cs" />
     <Compile Include="TemperatureScale.cs" />
     <Compile Include="WebBinding.xaml.cs">
       <DependentUpon>WebBinding.xaml</DependentUpon>
@@ -181,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Convert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataTemplating.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

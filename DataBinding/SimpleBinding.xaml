@@ -23,7 +23,7 @@
         <TextBox Grid.ColumnSpan="2" Margin="0,86,141,106">
             <TextBox.Text>
                 <Binding Source="{StaticResource myDataSource}" Path="PersonName"
-               UpdateSourceTrigger="PropertyChanged"/>
+                         UpdateSourceTrigger="PropertyChanged"/>
             </TextBox.Text>
         </TextBox>
 

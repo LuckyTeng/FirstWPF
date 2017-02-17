@@ -8,11 +8,12 @@
     </Window.Resources>
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
-    DataContext="{Binding Source={StaticResource AsyncDS}}">
+                DataContext="{Binding Source={StaticResource AsyncDS}}">
         <TextBlock FontSize="18" FontWeight="Bold" Margin="10"
-      HorizontalAlignment="Center">Priority Binding</TextBlock>
+                    HorizontalAlignment="Center">Priority Binding</TextBlock>
         <TextBlock Background="Honeydew" Width="100" HorizontalAlignment="Center">
       <TextBlock.Text>
+          <!-- The PriorityBinding binding object by priority, top is slowest object, if you assign IsAsync="True", if will bind by asyc method -->
         <PriorityBinding FallbackValue="defaultvalue">
           <Binding Path="SlowestDP" IsAsync="True"/>
           <Binding Path="SlowerDP" IsAsync="True"/>

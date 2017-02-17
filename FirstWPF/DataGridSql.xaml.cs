@@ -9,20 +9,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProductionInput
+namespace FirstWPF
 {
     /// <summary>
-    /// MainWindow.xaml 的互動邏輯
+    /// DataGridSql.xaml 的互動邏輯
     /// </summary>
-    public partial class MainWindow :Window
+    public partial class DataGridSql :Window
     {
-        public MainWindow()
+        public DataGridSql()
         {
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var items = new[]
+                {
+                    new {Name = "Teng", Age = 18},
+                    new {Name = "Hoa", Age = 22}
+                };
+
+            dataGrid1.ItemsSource = items;
+        }
     }
 }

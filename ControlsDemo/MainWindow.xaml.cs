@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProductionInput
+namespace ControlsDemo
 {
     /// <summary>
     /// MainWindow.xaml 的互動邏輯
@@ -24,5 +24,10 @@ namespace ProductionInput
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            InkCanvasDemo wnd = new InkCanvasDemo();
+            wnd.Show();
+        }
     }
 }

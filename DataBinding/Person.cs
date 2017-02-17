@@ -4,12 +4,23 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using DataBinding.Annotations;
 
+/* This example show how to impl the INotifyPropertyChanged and ObservableCollection<T>
+ * If the collection impl the ObservableCollection<T>, it don't need to be impl. the INotifyPropertyChanged in the collection item
+ */
 namespace DataBinding
 {
-    public class Person :IDataErrorInfo
+    public class Person :IDataErrorInfo, INotifyPropertyChanged
     {
-        public string PersonName { get; set; }
+        private string name;
+
+        public string PersonName { get { return name;} set
+        {
+            name = value;
+            OnPropertyChanged("PersonName"); /* same as the property name */
+        } }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string HomeTown { get; set; }
@@ -57,6 +68,15 @@ namespace DataBinding
             {
                 return null;
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 

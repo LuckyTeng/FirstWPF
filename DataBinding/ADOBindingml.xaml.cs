@@ -41,6 +41,7 @@ namespace DataBinding
             // Set the DataContext of the ListBox to myDataSet
 
             myListBox.DataContext = myDataSet;
+            myListBox1.DataContext = myDataSet.Tables["BookTable"];
 
         }
     }

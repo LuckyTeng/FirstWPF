@@ -1,0 +1,56 @@
+﻿<Window x:Class="ProductionInput.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="426" Width="579" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" >
+    <Window.Resources>
+        <XmlDataProvider x:Key="data1">
+            <x:XData>
+                <Books>
+                    <Book ISDN="FEWIFJWFJEIWFJEJF--EFEWF" Stock="out">
+                        <Title>IT Information</Title>
+                        <ISDN>34040-4343433-333-4334</ISDN>
+                    </Book>
+                    <Book>
+                        <Title>My Book2</Title>
+                        <ISDN>34040-4343433-333-4334</ISDN>
+                    </Book>
+                    <Book>
+                        <Title>My Book3</Title>
+                        <ISDN>34040-4343433-333-4334</ISDN>
+                    </Book>
+                    <Book>
+                        <Title>My Book4</Title>
+                        <ISDN>34040-4343433-333-4334</ISDN>
+                    </Book>
+                </Books>
+            </x:XData>
+        </XmlDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="307*" />
+        </Grid.RowDefinitions>
+    
+        <StackPanel Grid.RowSpan="2">
+            <ComboBox Height="23" Name="layoutCombo" Width="120" SelectedIndex="0">
+                <ComboBoxItem Content="Panel1" />
+                <ComboBoxItem Content="Panel2" />
+            </ComboBox>
+        </StackPanel>
+        <xctk:SwitchPanel x:Name="_switchPanel" Grid.Row="1" ActiveLayoutIndex="{Binding ElementName=layoutCombo, Path=SelectedIndex}" Margin="0,13,0,94">
+            <xctk:SwitchPanel.Layouts>
+                <xctk:WrapPanel x:Name="_wrapPanel" ItemWidth="100" ItemHeight="100" />
+                <xctk:RandomPanel x:Name="_randomPanel" />
+            </xctk:SwitchPanel.Layouts>
+            <TextBlock x:Name="_item1" Text="Item #1"  />
+            <TextBlock x:Name="_item2" Text="Item #2"  />
+            <TextBlock x:Name="_item3" Text="Item #3"  />
+            <TextBlock x:Name="_item4" Text="Item #4"  />
+            <TextBlock x:Name="_item5" Text="Item #5"  />
+            <TextBlock x:Name="_item6" Text="Item #6"  />
+            <TextBlock x:Name="_item7" Text="Item #7"  />
+            <TextBlock x:Name="_item8" Text="Item #8"  />
+        </xctk:SwitchPanel>
+    </Grid>
+</Window>

@@ -35,26 +35,26 @@
 
                             <!-- Outer Rectangle with rounded corners. -->
                             <Rectangle x:Name="outerRectangle" 
-          HorizontalAlignment="Stretch" 
-          VerticalAlignment="Stretch" 
-          Stroke="{TemplateBinding Background}" 
-          RadiusX="20" RadiusY="20" StrokeThickness="5" 
-          Fill="Transparent" />
+                                      HorizontalAlignment="Stretch" 
+                                      VerticalAlignment="Stretch" 
+                                      Stroke="{TemplateBinding Background}" 
+                                      RadiusX="20" RadiusY="20" StrokeThickness="5" 
+                                      Fill="Transparent" />
 
                             <!-- Inner Rectangle with rounded corners. -->
                             <Rectangle x:Name="innerRectangle" 
-          HorizontalAlignment="Stretch" 
-          VerticalAlignment="Stretch" Stroke="Transparent" 
-          StrokeThickness="20" 
-          Fill="{TemplateBinding Background}" 
-          RadiusX="20" RadiusY="20"   />
+                                        HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" Stroke="Transparent" 
+                                        StrokeThickness="20" 
+                                        Fill="{TemplateBinding Background}" 
+                                        RadiusX="20" RadiusY="20"   />
 
                             <!-- Glass Rectangle -->
                             <Rectangle x:Name="glassCube" HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch"
-        StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0"
-        Fill="{StaticResource MyGlassBrushResource}"
-        RenderTransformOrigin="0.5,0.5">
+                                        VerticalAlignment="Stretch"
+                                        StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0"
+                                        Fill="{StaticResource MyGlassBrushResource}"
+                                        RenderTransformOrigin="0.5,0.5">
                                 <Rectangle.Stroke>
                                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                         <LinearGradientBrush.GradientStops>

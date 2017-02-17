@@ -4,6 +4,7 @@
         Title="Portal" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="542" d:DesignWidth="188" SizeToContent="WidthAndHeight">
     <StackPanel Height="Auto" Name="stackPanel1" Width="Auto">
         <Button Content="CompositeCollection" Height="23" Name="button1" Width="Auto" HorizontalAlignment="Left" Margin="0,0,0,5" Click="button1_Click" />
+        <Button Content="ADOBinding" Height="23" Name="button18" Width="Auto" HorizontalAlignment="Left" Margin="0,0,0,5" Click="button18_Click" />
         <Button Content="SimpleBinding" Height="23" Name="button2" Width="Auto"  HorizontalAlignment="Left" Margin="0,0,0,5" Click="button2_Click" />
         <Button Content="BaseOnSelection" Height="23" Name="button3" Width="Auto"  HorizontalAlignment="Left" Margin="0,0,0,5" Click="button3_Click" />
         <Button Content="Convert" Height="23" Name="button4" Width="Auto"  HorizontalAlignment="Left" Margin="0,0,0,5" Click="button4_Click" />
@@ -19,6 +20,9 @@
         <Button Content="ImageProgress" Height="23" Name="button15" Width="Auto" Margin="0,0,0,5" HorizontalAlignment="Left" Click="button15_Click" />
         <Button Content="XMLDataProvider" Height="23" Name="button16" Width="Auto" Margin="0,0,0,5" HorizontalAlignment="Left" Click="button16_Click" />
         <Button Content="BindMethod" Height="23" Name="button17" Width="Auto" Margin="0,0,0,5" HorizontalAlignment="Left" Click="button17_Click" />
+        <Button Content="DataTemplating" Height="23"  Width="Auto"  HorizontalAlignment="Left" Margin="0,0,0,5" Click="Button_Click" />
         <Button Content="Close" Height="23" Name="button6" Width="Auto"  HorizontalAlignment="Left" Margin="0,0,0,5" Click="button6_Click" />
+        
+        
     </StackPanel>
 </Window>

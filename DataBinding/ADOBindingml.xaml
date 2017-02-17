@@ -1,8 +1,8 @@
 ﻿<Window x:Class="DataBinding.ADOBindingml"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c="clr-namespace:DataBinding"
-        Title="ADOBindingml" Loaded="Window_Loaded" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="326" d:DesignWidth="575" SizeToContent="WidthAndHeight">
-    <StackPanel Height="304" Width="602">
+        Title="ADOBindingml" Loaded="Window_Loaded" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="534" d:DesignWidth="609" SizeToContent="WidthAndHeight">
+    <StackPanel Height="Auto" Width="Auto" MinWidth="600" MinHeight="800">
         <StackPanel.Resources>
             <c:IntColorConverter x:Key="MyConverter"/>
 
@@ -13,18 +13,22 @@
                         <ColumnDefinition Width="100" />
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{Binding Path=Title}" Grid.Column="0"
-          FontWeight="Bold" />
+                    <TextBlock Text="{Binding Path=Title}" Grid.Column="0" FontWeight="Bold" />
                     <TextBlock Text="{Binding Path=ISBN}" Grid.Column="1" />
                     <TextBlock Grid.Column="2" Text="{Binding Path=NumPages}"
-                   Background="{Binding Path=NumPages,
-            Converter={StaticResource MyConverter}}"/>
+                               Background="{Binding Path=NumPages,
+                               Converter={StaticResource MyConverter}}"/>
                 </Grid>
             </DataTemplate>
 
         </StackPanel.Resources>
         <ListBox Name="myListBox" Height="200"
             ItemsSource="{Binding Path=BookTable}"
+            ItemTemplate  ="{StaticResource BookItemTemplate}"/>
+
+        <!-- Binding Context -->
+        <ListBox Name="myListBox1" Height="200"
+            ItemsSource="{Binding}" 
             ItemTemplate  ="{StaticResource BookItemTemplate}"/>
 
     </StackPanel>
